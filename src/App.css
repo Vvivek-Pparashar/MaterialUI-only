@@ -1,1 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+
+.App{
+    position: sticky;
+    top : 0;
+    background-color: aqua;
+}

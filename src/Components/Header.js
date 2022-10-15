@@ -30,7 +30,7 @@ function Header() {
 
   return (
     <div className="App">
-      <AppBar sx={{ background: "white" }}>
+      <AppBar sx={{ background: "white", position:"sticky", top: 0 }}>
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <Typography
             variant="h4"
