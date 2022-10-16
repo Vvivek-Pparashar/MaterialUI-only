@@ -12,7 +12,7 @@ import React, { useState } from "react";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import FitScreenIcon from "@mui/icons-material/FitScreen";
-import { Translate } from "@mui/icons-material";
+
 
 const CardComp = ({ key, price, name, image, description }) => {
   const [color, setColor] = useState("grey");
