@@ -30,7 +30,7 @@ const Home = () => {
           </Typography>
           <Button
             variant="contained"
-            sx={{ padding: "10px 0", outline: "none", background:"#522C3D" }}
+            sx={{ padding: "10px 0", outline: "none", background:"#522C3D", zIndex:"0" }}
           >
             Shop Now
           </Button>
