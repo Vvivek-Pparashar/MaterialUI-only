@@ -61,7 +61,7 @@ const CardComp = ({ key, price, name, image, description }) => {
         }}
         onMouseLeave={mouseOut}
       >
-        <CardMedia component="img" src={image} alt={name} sx={{ mb: 4 }} />
+        <CardMedia component="img" href={image} alt={name} sx={{ mb: 4 }} />
         <Stack sx={{ position: "absolute", right: 0, top: 0, mr: 2, mt: 1 }}>
           <IconButton
             onClick={changeColor}
