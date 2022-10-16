@@ -1,7 +1,7 @@
 .home__hero {
   display: flex;
   justify-content: space-around;
-  background-image: url("/public/images/banner/banner_ph.png");
+  background-image: url("./images/banner/banner_ph.png");
   box-sizing: border-box;
   width: 100%;
   height: 70vh;
@@ -12,7 +12,7 @@
 }
 
 .home__hero__img {
-  background-image: url("/public/images/banner/banner.png");
+  background-image: url("./images/banner/banner.png");
   width: 35%;
   height: 70vh;
   background-repeat: no-repeat;
