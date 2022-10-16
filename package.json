@@ -1,6 +1,7 @@
 {
   "name": "myapp",
   "version": "0.1.0",
+  "homepage": "http://Vvivek-Pparashar.github.io/MaterialUI-only",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
