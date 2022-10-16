@@ -11,6 +11,7 @@ const App = () => {
       <Home/>
       <Promotions/>
       <Product/>
+      
     </>
   )
 }

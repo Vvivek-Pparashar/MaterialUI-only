@@ -8,7 +8,6 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { Container } from "@mui/system";
 import React, { useState } from "react";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
@@ -84,7 +83,7 @@ const CardComp = ({ key, price, name, image, description }) => {
               padding: "10px 30px",
               background: "#C6ACC9",
               transform: "translateX(-50%)",
-              transition : "0.5s linear"
+              // transition : "0.5s linear"
             }}
             onMouseEnter={mouseEnter}
             onMouseLeave={mouseEnter}
