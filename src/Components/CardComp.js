@@ -12,10 +12,12 @@ import React, { useState } from "react";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import FitScreenIcon from "@mui/icons-material/FitScreen";
+import { Translate } from "@mui/icons-material";
 
 const CardComp = ({ key, price, name, image, description }) => {
   const [color, setColor] = useState("grey");
   const [show, setShow] = useState(false);
+  const [value, setValue] = useState({ sider: 30, lower: 0, opac: 0 });
 
   const changeColor = () => {
     console.log("first");
@@ -25,10 +27,13 @@ const CardComp = ({ key, price, name, image, description }) => {
 
   const mouseEnter = () => {
     setShow(true);
+    console.log("first");
   };
 
   const mouseOut = () => {
     setShow(false);
+    setValue({ sider: 30, lower: 0, opac: 0 });
+    console.log(value);
   };
 
   return (
@@ -49,6 +54,11 @@ const CardComp = ({ key, price, name, image, description }) => {
           position: "relative",
         }}
         onMouseMove={mouseEnter}
+        onMouseEnter={() => {
+          setTimeout(() => {
+            setValue({ sider: 0, lower: 10, opac: 1 });
+          }, 100);
+        }}
         onMouseLeave={mouseOut}
       >
         <CardMedia component="img" image={image} alt={name} sx={{ mb: 4 }} />
@@ -61,10 +71,25 @@ const CardComp = ({ key, price, name, image, description }) => {
           </IconButton>
           {show && (
             <>
-              <IconButton sx={{ backgroundColor: "white", mb: 1 }}>
+              <IconButton
+                sx={{
+                  backgroundColor: "white",
+                  mb: 1,
+                  transform: `TranslateX(${value.sider}px)`,
+                  transition: "all 0.2s linear",
+                  opacity: `${value.opac}`,
+                }}
+              >
                 <ShareIcon />
               </IconButton>
-              <IconButton sx={{ backgroundColor: "white" }}>
+              <IconButton
+                sx={{
+                  backgroundColor: "white",
+                  transform: `TranslateX(${value.sider}px)`,
+                  transition: "all 0.2s linear",
+                  opacity: `${value.opac}`,
+                }}
+              >
                 <FitScreenIcon />
               </IconButton>
             </>
@@ -79,14 +104,13 @@ const CardComp = ({ key, price, name, image, description }) => {
               position: "absolute",
               bottom: 0,
               left: "50%",
-              transfrom: " translte",
+              mb: `${value.lower}px`,
               padding: "10px 30px",
               background: "#C6ACC9",
               transform: "translateX(-50%)",
-              // transition : "0.5s linear"
+              transition: "0.2s linear",
+              opacity: `${value.opac}`,
             }}
-            onMouseEnter={mouseEnter}
-            onMouseLeave={mouseEnter}
           >
             Add to Card
           </Button>
