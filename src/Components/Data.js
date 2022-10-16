@@ -25,7 +25,7 @@ const products = [
         name: "Casual",
         price: 129.99,
         description: "Torem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmo tempor incididunt ut labore et dolore magna",
-        image: "../images/products/bag_04.png"
+        image: "./images/products/bag_04.png"
     },
     {
         id: 5,
@@ -39,7 +39,7 @@ const products = [
         name: "Charming Series",
         price: 689.99,
         description: "Torem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmo tempor incididunt ut labore et dolore magna",
-        image: "../images/products/bag_06.png"
+        image: "/images/products/bag_06.png"
     }
 ]
 

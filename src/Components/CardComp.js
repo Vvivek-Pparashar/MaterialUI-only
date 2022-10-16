@@ -13,7 +13,6 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import FitScreenIcon from "@mui/icons-material/FitScreen";
 
-
 const CardComp = ({ key, price, name, image, description }) => {
   const [color, setColor] = useState("grey");
   const [show, setShow] = useState(false);
@@ -61,7 +60,7 @@ const CardComp = ({ key, price, name, image, description }) => {
         }}
         onMouseLeave={mouseOut}
       >
-        <CardMedia component="img" href={image} alt={name} sx={{ mb: 4 }} />
+        <CardMedia component="img" image={image} alt={name} sx={{ mb: 4 }} />
         <Stack sx={{ position: "absolute", right: 0, top: 0, mr: 2, mt: 1 }}>
           <IconButton
             onClick={changeColor}
